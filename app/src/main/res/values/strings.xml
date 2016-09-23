@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Activity Life-cycle</string>
+    <string name="intro">This exercise demonstrates the:\n
+                        Activity life-cycle callback methods.\n
+                        Views referencing.\n
+                        and On-click handler</string>
+    <string name="na">Name:</string>
+    <string name="enterna">enter here your first name</string>
+    <string name="buttom">Try me!</string>
+</resources>
