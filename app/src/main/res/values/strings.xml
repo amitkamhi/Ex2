@@ -7,4 +7,6 @@
     <string name="na">Name:</string>
     <string name="enterna">enter here your first name</string>
     <string name="buttom">Try me!</string>
+    <string name="emptyName">Wait! You should first enter your name above</string>
+    <string name="firstName">Welcome %s, this is your first java coding experience in Android.\n Congratulation!!!</string>
 </resources>

@@ -13,6 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/intro"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
         android:textSize="21sp"
         android:id="@+id/intro"/>
 
@@ -29,6 +31,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/na"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
             android:id="@+id/Name"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="30dp" />
@@ -48,5 +52,6 @@
         android:text="@string/buttom"
         android:id="@+id/buttonTry"
         android:layout_marginLeft="140dp"
-        android:layout_marginTop="210dp"/>
+        android:layout_marginTop="210dp"
+        android:onClick="desplayMessage"/>
 </RelativeLayout>
