@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int pressCount;
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void desplayMessage(View view){
+        pressCount++;
         EditText ed = (EditText) findViewById(R.id.enterName);
         String name = ed.getText().toString();
         String message = getResources().getString(R.string.emptyName);
@@ -63,4 +66,5 @@ public class MainActivity extends AppCompatActivity {
         else
             Toast.makeText(this, String.format(realMessage, name), Toast.LENGTH_LONG).show();
     }
+
 }
