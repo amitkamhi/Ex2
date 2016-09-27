@@ -37,7 +37,7 @@
         <EditText
             android:layout_width="225dp"
             android:layout_height="wrap_content"
-            android:text="@string/enterna"
+            android:hint="@string/enterna"
             android:id="@+id/enterName"
             android:layout_marginTop="50dp"/>
 
