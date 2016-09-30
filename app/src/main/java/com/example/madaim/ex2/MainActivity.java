@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private int pressCount;
+    private final String KEY_COUNT = "count";
 
     @Override
     protected void onDestroy() {
@@ -61,10 +62,30 @@ public class MainActivity extends AppCompatActivity {
         String name = ed.getText().toString();
         String message = getResources().getString(R.string.emptyName);
         String realMessage = getResources().getString(R.string.firstName);
-        if (name.isEmpty())
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-        else
-            Toast.makeText(this, String.format(realMessage, name), Toast.LENGTH_LONG).show();
+        if (name.isEmpty()){
+            Toast.makeText(this,String.format(message ,pressCount), Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(this, String.format(realMessage, pressCount, name), Toast.LENGTH_LONG).show();
+        }
+
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt(KEY_COUNT, pressCount);
+        super.onSaveInstanceState(outState);
+        Log.i(MyApp.MY_TAG, "MainActivity: onSaveInstanceState event");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        if(savedInstanceState != null){
+            this.pressCount = savedInstanceState.getInt(KEY_COUNT, 0);
+        }
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.i(MyApp.MY_TAG, "MainActivity: onRestoreInstanceState event");
+    }
+
 
 }
